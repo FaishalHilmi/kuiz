@@ -2,7 +2,7 @@ import PlainLayout from "../layouts/PlainLayout";
 import InputLabel from "../components/InputLabel";
 import { useEffect, useEffectEvent, useState } from "react";
 import useAuth from "../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [userData, setUserData] = useState({ username: "", password: "" });
@@ -53,6 +53,11 @@ export default function Login() {
             >
               Sign In
             </button>
+            <div className="flex justify-center mt-4">
+              <Link to="/" className="text-white/50 text-sm underline">
+                Kembali ke Beranda
+              </Link>
+            </div>
           </form>
         </div>
       </div>
