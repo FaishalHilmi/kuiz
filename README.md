@@ -1,17 +1,111 @@
-# React + Vite
+# 🚀 Kuiz – Modern Computer Science Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Kuiz** adalah platform ujian digital berbasis web yang interaktif, cepat, dan modern. Dibangun menggunakan **React.js** dan **Tailwind CSS**, aplikasi ini menghadirkan pengalaman pengerjaan kuis yang mulus dengan fitur pencatatan progres otomatis (*state persistence*).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Fitur Unggulan
 
-## React Compiler
+- 🎯 **Real-time Quiz Engine**  
+  Pengambilan soal kuis secara dinamis dari **Open Trivia Database API**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⏳ **Intelligent Timer**  
+  Countdown selama 110 detik yang tetap berjalan meskipun halaman di-refresh.
 
-## Expanding the ESLint configuration
+- 💾 **Auto-Resume Progress**  
+  Progres pengerjaan dan sisa waktu tersimpan aman menggunakan **LocalStorage**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# kuiz
+- 📊 **Performance Analytics**  
+  Hasil skor instan lengkap dengan:
+  - Persentase nilai
+  - Jumlah jawaban benar dan salah
+  - Status kelulusan
+
+- 🛡️ **Secure Navigation**  
+  Proteksi rute halaman untuk mencegah akses ilegal ke halaman hasil kuis.
+
+- 📱 **Ultra Responsive UI**  
+  Tampilan optimal di perangkat mobile, tablet, dan desktop.
+
+- 🔔 **Dynamic Confirmation Modals**  
+  Modal interaktif untuk aksi krusial seperti:
+  - Start Quiz
+  - Restart Quiz
+  - Logout
+
+---
+
+## 🛠️ Tech Stack
+
+| Teknologi | Penggunaan |
+|---------|------------|
+| **React.js** | Core UI Library |
+| **Tailwind CSS** | Styling & Responsive Design |
+| **React Router DOM v6** | Client-side Routing |
+| **Context API** | Global State Management |
+| **Axios** | HTTP Client / API Fetching |
+| **React Icons** | UI Iconography |
+
+---
+
+## 📦 Struktur Proyek
+
+```plaintext
+src/
+├── components/   # Reusable components (Modal, Navbar, Button)
+├── context/      # Global state (AuthContext, QuizContext)
+├── hooks/        # Custom hooks (useQuiz, useAuth)
+├── layouts/      # Layout wrapper (MainLayout)
+├── pages/        # Login, Dashboard, Quiz, Result
+└── utils/        # API helpers & utility functions
+
+```
+### Instalasi
+
+1. Clone repository:
+
+   ```bash
+   https://github.com/FaishalHilmi/kuiz.git
+
+   ```
+
+2. Masuk direktori proyek
+
+   ```bash
+   cd kuiz
+
+   ```
+
+3. Install dependensi yang diperlukan:
+
+   ```bash
+   npm install
+
+   ```
+
+4. Buat file .env untuk konfigurasi API, dan tambahkan variabel berikut:
+
+   ```bash
+   VITE_API_URL = 'https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple'
+
+   ```
+
+5. Jalakan server
+
+   ```bash
+   npm run dev
+
+   ```
+
+6. Akses aplikasi di browser pada:
+
+   ```bash
+   http://localhost:5173/
+
+   ```
+
+7. Untuk membuat build produksi:
+
+   ```bash
+   npm run build
+   ```
